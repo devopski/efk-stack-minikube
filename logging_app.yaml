@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logger-app
+spec:
+  selector:
+    matchLabels:
+      app: logger-app
+  replicas: 1
+  template: 
+    metadata:
+      labels:
+        app: logger-app
+    spec:
+      containers:
+      - name: logger-app
+        image: devopski/logger-app
+
