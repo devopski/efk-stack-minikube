@@ -29,3 +29,7 @@ kubectl port-forward deployment.apps/my-kibana-kibana -n efk-stack 5601:5601
 ```
 kubectl apply -f logging_app.yaml
 ```
+
+```
+kubectl port-forward service/my-kibana-kibana 5601:5601 -n efk-stack
+```
